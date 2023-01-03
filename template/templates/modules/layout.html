@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="html (head, content)">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2"/>
+  <title th:text="${site.title}"></title>
+  
+  <link rel="stylesheet" th:href="@{/assets/dist/style.css}"/>
+  
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<!--  <script src="https://cdn.bootcdn.net/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>-->
+  
+<!--  <link href="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.css" rel="stylesheet">-->
+<!--  <script src="https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js"></script>-->
+
+  <script th:src="@{/assets/dist/main.iife.js}"></script>
+  <th:block th:if="${head != null}">
+    <th:block th:replace="${head}"/>
+  </th:block>
+</head>
+<body>
+<main id="main" class="">
+  <th:block th:replace="~{modules/aside}"/>
+
+  <div class="container" id="container">
+    <th:block th:replace="${content}"/>
+    <th:block th:replace="~{modules/footer}"/>
+  </div>
+  
+</main>
+</body>
+</html>

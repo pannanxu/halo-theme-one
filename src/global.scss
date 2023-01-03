@@ -1,0 +1,24 @@
+// 标题文字颜色
+$color-title: rgba(000, 000, 000, .9);
+$color-primary: rgba(000, 000, 000, .8);
+// 描述文字颜色
+$color-describe: rgba(000, 000, 000, .7);
+$color-lesser: rgba(000, 000, 000, .6);
+
+// 盒子边框颜色
+$box-border-color: #F1F1F1;
+
+// 像素8的倍数
+$s: 8px;
+$s-2: 16px;
+$s-3: 24px;
+$s-4: 32px;
+$s-5: 40px;
+$s-6: 48px;
+$s-7: 56px;
+$s-8: 64px;
+$s-9: 72px;
+
+
+@mixin link {
+}

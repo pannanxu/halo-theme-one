@@ -1,0 +1,30 @@
+.category {
+  margin-bottom: $s-3;
+
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: $box-border-color 1.5px solid;
+
+    li {
+      margin-right: $s-2;
+      padding: $s 0;
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: $color-lesser;
+      }
+    }
+
+    .category-active {
+      border-bottom: #000 solid 1.5px;
+      a {
+        color: $color-primary;
+        font-weight: bold;
+      }
+    }
+  }
+
+}

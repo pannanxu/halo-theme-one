@@ -1,0 +1,11 @@
+<section class="category">
+  <article>
+    <ul th:with="categories = ${categoryFinder.list(1,10)}">
+      <li class="category-active" th:each="category : ${categories.items}">
+        <a href="/"
+           th:href="@{${category.status.permalink}}"
+           th:text="${category.spec.displayName}">Stories</a>
+      </li>
+    </ul>
+  </article>
+</section>

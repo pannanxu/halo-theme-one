@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="html (content)"
+      th:replace="~{modules/layout :: html(head = null,content = ~{::content})}"
+>
+<th:block th:fragment="content">
+  <section>
+
+    <article>
+      <h1 th:text="${singlePage.spec.title}"></h1>
+    </article>
+
+    <article id="content" class="markdown-body"
+             th:utext="${singlePage.content.content}"
+    >
+    </article>
+
+    <article id="comment" th:if="${pluginFinder.available('PluginCommentWidget')}">
+      <!-- https://github.com/halo-sigs/plugin-comment-widget -->
+      <h2>评论</h2>
+      <halo:comment
+        group="content.halo.run"
+        kind="SinglePage"
+        th:attr="name=${singlePage.metadata.name}"
+        colorScheme="window.main.currentColorScheme"
+      />
+    </article>
+
+  </section>
+</th:block>
+</body>
+</html>

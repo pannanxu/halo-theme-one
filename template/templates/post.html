@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" th:fragment="html (content)"
+      th:replace="~{modules/layout :: html(head = null,content = ~{::content})}"
+>
+
+<th:block th:fragment="content">
+  <section>
+
+    <article>
+      <h1 th:text="${post.spec.title}">奥密克戎治疗方案</h1>
+      <!--        <ul>-->
+      <!--          <li>发布于 2022-12-11</li>-->
+      <!--          <li>60 阅读</li>-->
+      <!--          <li>1 评论</li>-->
+      <!--          <li>0 点赞</li>-->
+      <!--        </ul>-->
+    </article>
+
+    <article id="content" class="markdown-body" th:utext="${post.content.content}">
+
+      markdown content...
+    </article>
+
+    <article id="comment" th:if="${pluginFinder.available('PluginCommentWidget')}">
+      <!-- https://github.com/halo-sigs/plugin-comment-widget -->
+      <h2>评论</h2>
+      <halo:comment
+        group="content.halo.run"
+        kind="Post"
+        th:attr="name=${post.metadata.name}"
+        colorScheme="window.main.currentColorScheme"
+      />
+    </article>
+
+  </section>
+</th:block>
+</body>
+</html>

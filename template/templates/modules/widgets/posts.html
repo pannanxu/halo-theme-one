@@ -1,0 +1,117 @@
+<section class="posts">
+  <article class="post" th:each="post : ${posts.items}">
+    <div class="post-wrapper">
+      <a href="/"
+         th:href="${post.status.permalink}"
+      >
+        <div class="post-media">
+          <div class="media">
+            <div class="media-content"
+                 th:style="'background-image: url(' + @{/assets/images/post/2020082618341524-scaled-e1598466869349.jpeg} + ')'"
+                 style="background-image: url(./assets/images/post/2020082618341524-scaled-e1598466869349.jpeg)"
+            >
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="post-content">
+        <h2><a href="/"
+               th:text="${post.spec.title}"
+               th:href="${post.status.permalink}"
+        >Inside The Global Fashion Summit Attempting To Un-Fuck The Planet</a></h2>
+        <div class="post-owner"><span>Youth Club Magazine</span> <span>•</span> <span>12hours ago</span></div>
+        <div class="post-tags"><span>Life & Culture</span><span>Life & Culture</span></div>
+      </div>
+    </div>
+  </article>
+  <!--<article class="post">
+    <div class="post-wrapper">
+      <a href="/">
+        <div class="post-media">
+          <div class="media">
+            <div class="media-content"
+                 style="background-image: url(./assets/images/post/2020082616415480-scaled-e1598460143970.jpeg)">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="post-content">
+        <h2><a href="/">Inside The Global Fashion Summit Attempting To Un-Fuck The Planet</a></h2>
+        <div class="post-owner"><span>Youth Club Magazine</span> <span>•</span> <span>12hours ago</span></div>
+        <div class="post-tags"><span>Life & Culture</span><span>Life & Culture</span></div>
+      </div>
+    </div>
+  </article>
+  <article class="post">
+    <div class="post-wrapper">
+      <a href="/">
+        <div class="post-media">
+          <div class="media">
+            <div class="media-content"
+                 style="background-image: url(./assets/images/post/2020082617344584.jpg)">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="post-content">
+        <h2><a href="/">Inside The Global Fashion Summit Attempting To Un-Fuck The Planet</a></h2>
+        <div class="post-owner"><span>Youth Club Magazine</span> <span>•</span> <span>12hours ago</span></div>
+        <div class="post-tags"><span>Life & Culture</span><span>Life & Culture</span></div>
+      </div>
+    </div>
+  </article>
+  <article class="post">
+    <div class="post-wrapper">
+      <a href="/">
+        <div class="post-media">
+          <div class="media">
+            <div class="media-content"
+                 style="background-image: url(./assets/images/post/2020082618051370.jpg)">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="post-content">
+        <h2><a href="/">Inside The Global Fashion Summit Attempting To Un-Fuck The Planet</a></h2>
+        <div class="post-owner"><span>Youth Club Magazine</span> <span>•</span> <span>12hours ago</span></div>
+        <div class="post-tags"><span>Life & Culture</span><span>Life & Culture</span></div>
+      </div>
+    </div>
+  </article>
+  <article class="post">
+    <div class="post-wrapper">
+      <a href="/">
+        <div class="post-media">
+          <div class="media">
+            <div class="media-content"
+                 style="background-image: url(./assets/images/post/2020082618045414.jpg)">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="post-content">
+        <h2><a href="/">Inside The Global Fashion Summit Attempting To Un-Fuck The Planet</a></h2>
+        <div class="post-owner"><span>Youth Club Magazine</span> <span>•</span> <span>12hours ago</span></div>
+        <div class="post-tags"><span>Life & Culture</span><span>Life & Culture</span></div>
+      </div>
+    </div>
+  </article>
+  <article class="post">
+    <div class="post-wrapper">
+      <a href="/">
+        <div class="post-media">
+          <div class="media">
+            <div class="media-content"
+                 style="background-image: url(./assets/images/post/2020082618341524-scaled-e1598466869349.jpeg)">
+            </div>
+          </div>
+        </div>
+      </a>
+      <div class="post-content">
+        <h2><a href="/">Inside The Global Fashion Summit Attempting To Un-Fuck The Planet</a></h2>
+        <div class="post-owner"><span>Youth Club Magazine</span> <span>•</span> <span>12hours ago</span></div>
+        <div class="post-tags"><span>Life & Culture</span><span>Life & Culture</span></div>
+      </div>
+    </div>
+  </article>-->
+</section>

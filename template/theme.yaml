@@ -1,0 +1,17 @@
+apiVersion: theme.halo.run/v1alpha1
+kind: Theme
+metadata:
+  name: halo-theme-one
+spec:
+  displayName: One
+  author:
+    name: pannanxu
+    website: http://mvvm.io
+  description: halo theme one.
+  logo: http://mvvm.io/logo
+  website: https://github.com/pannanxu/halo-theme-one
+  repo: https://github.com/pannanxu/halo-theme-one.git
+  settingName: "halo-theme-one-setting"
+  configMapName: "halo-theme-one-configMap"
+  version: 1.0.0
+  require: 2.0.0
